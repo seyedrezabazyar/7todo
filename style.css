@@ -1,0 +1,611 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+html {
+    background-color: rgb(186, 204, 224);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-smooth: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.page {
+    position: absolute;
+    min-height: 650px;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.pageHeader {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #2196F3;
+    color: White;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    vertical-align: middle;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.pageHeader .title {
+    width: 40%;
+    float: left;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.pageHeader .userPanel {
+    width: 40%;
+    float: right;
+}
+
+.pageHeader .userPanel i {
+    float: right;
+    line-height: 40px;
+    padding-right: 10px;
+}
+
+.pageHeader .userPanel .username {
+    float: right;
+    line-height: 40px;
+    padding: 0px 20px;
+    font-weight: 600;
+    font-size: 1.0em;
+}
+
+.pageHeader .userPanel img {
+    float: right;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    clear: both;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.main .nav {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: rgba(227, 234, 235, 0.8);
+    border-bottom-left-radius: 10px;
+}
+
+.main .nav .searchbox {
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px;
+    background-color: White;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.main .nav .searchbox i {
+    display: inline-block;
+    color: #bbb;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.main .nav .searchbox input {
+    display: inlin-block;
+    width: 120px;
+    background-color: White;
+    color: Black;
+    font-family: "Lato";
+    border: 0px;
+}
+
+.main .nav .menu {
+    width: 100%;
+    margin: 15px;
+    color: #555;
+}
+
+.main .nav .menu .title {
+    font-weight: 700;
+    font-size: 1.0em;
+    text-transform: uppercase;
+}
+
+.main .nav .menu ul {
+    padding-left: 0px;
+}
+
+.main .nav .menu ul li {
+    cursor: pointer;
+    list-style: none;
+    margin: 5px 0px;
+    padding: 5px 0px;
+    font-weight: 600;
+    margin-right: 30px;
+    padding-left: 10px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.main .nav .menu ul li.active {
+    color: #2196F3;
+}
+
+.main .nav .menu ul li:hover {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+}
+
+.removeFolderBtn {
+    float: right;
+    color: #f44336;
+}
+
+.main .nav .menu ul li a {
+    text-decoration: none;
+    color: #2196F3;
+}
+
+.main .nav .menu ul li i {
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.main .view {
+    position: relative;
+    margin-left: 200px;
+}
+
+.main .view .viewHeader {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    padding: 20px 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+div.addTask {
+    float: left;
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 0px;
+    color: #AAA;
+    margin-top: -18px;
+    width: 40%;
+}
+
+@media only screen and (max-width: 1340px) {
+    div.addTask {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1065px) {
+    div.addTask {
+        width: 60%;
+    }
+    button.addtaskbtn {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    button.addtaskbtn {
+        font-size: 10px;
+    }
+}
+
+.main .view .viewHeader .functions {
+    float: right;
+}
+
+.main .view .viewHeader .functions .button {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    background-color: #AAA;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0px 5px;
+    padding: 0px 20px;
+    cursor: pointer;
+    color: White;
+    font-weight: 700;
+}
+
+.main .view .viewHeader .functions .button.active {
+    background-color: #2196F3;
+}
+
+.main .view .viewHeader .functions .button.inverz {
+    background-color: inherit;
+    border: 1px solid #AAA;
+    width: 10px;
+    color: #AAA;
+    font-size: 1.3em;
+    padding-left: 10px;
+    padding-right: 16px;
+}
+
+.main .view .content {
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+}
+
+.main .view .content .list .title {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2196F3;
+}
+
+.main .view .content .list ul {
+    width: 100%;
+    padding-left: 10px;
+    color: #777;
+}
+
+.main .view .content .list ul li {
+    height: 60px;
+    line-height: 60px;
+    list-style: none;
+}
+
+.main .view .content .list ul li.checked {
+    background-color: rgb(76 175 80 / 0.2);
+    color: #4CAF50;
+}
+
+.main .view .content .list ul li:last-child {
+    border-bottom: 1px solid #AAA;
+}
+
+.main .view .content .list ul li i {
+    float: left;
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+
+.main .view .content .list ul li span {
+    float: left;
+    font-weight: 600;
+}
+
+.main .view .content .list ul li .info {
+    float: right;
+}
+
+.main .view .content .list ul li .info span {
+    font-weight: 300;
+}
+
+.main .view .content .list ul li .info .button {
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #AAA;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    color: White;
+    font-weight: 700;
+}
+
+.main .view .content .list ul li .info .button.green {
+    background-color: #4CAF50;
+}
+
+.clear {
+    clear: both;
+}
+
+.addFolderBox {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px;
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input#addFolderInput {
+    width: 130px;
+    background-color: #ffffff;
+    color: Black;
+    font-family: "Lato";
+    border: 0px;
+    margin-left: 5px;
+}
+
+button.addFolderbtn {
+    position: relative;
+    right: 4px;
+    width: 25px;
+    height: 25px;
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.2);
+    border-radius: 5px;
+    border: 1px none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button.addFolderbtn:hover {
+    color: #ffffff;
+    background-color: rgba(76, 175, 80, 0.8);
+}
+
+.addFolderbtn i {
+    font-size: 16px;
+}
+
+span.task-created-at {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+button.removeTaskBtn {
+    width: 30px;
+    height: 30px;
+    color: #f44336;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    background: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+button.removeTaskBtn:before {
+    content: "\f00d";
+    font-family: 'FontAwesome';
+}
+
+button.removeFolderBtn {
+    color: #f44336;
+    font-size: 19px;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+button.removeFolderBtn:before {
+    content: "\f00d";
+    font-family: 'FontAwesome';
+}
+
+span.folderTitle {
+    color: #2196F3;
+    padding-left: 5px;
+}
+
+li.folderRow:before {
+    content: "\f07b";
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #2196F3;
+    position: relative;
+    top: 2px;
+}
+
+li.folderRow.active:before {
+    content: "\f07c";
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #4CAF50;
+    position: relative;
+    top: 2px;
+}
+
+li.folderRow.active span {
+    color: #4CAF50 !important;
+}
+
+li.folderRow.active:hover {
+    background-color: rgb(76 175 80 / 0.2) !important;
+}
+
+.emptyTask {
+    position: absolute;
+    font-size: 25px;
+    color: #f44336;
+    background-color: rgb(244 67 54 / 0.1);
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+
+button.addtaskbtn {
+    width: 20%;
+    height: 35px;
+    border: none;
+    background-color: rgb(33 150 243 / 0.2);
+    color: #2196F3;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+}
+
+input#addTaskInput {
+    width: 70%;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: Black;
+    font-family: "Lato";
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+
+li.taskRow {
+    border: none !important;
+    border-radius: 7px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    margin: 15px 35px 15px 15px;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+li.taskRow:hover {
+    cursor: pointer;
+    background-color: rgb(76 175 80 / 0.2);
+    color: #4CAF50;
+}
+
+div.taskInfoTitle {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2196F3;
+}
+
+span.taskInfoCreatedAt {
+    float: right;
+    margin-right: 50px;
+}
+
+span.taskInfoTitle {
+    margin-left: 20px;
+}
+
+a.logOut {
+    color: #ffffff;
+    font-size: 25px;
+    position: relative;
+    top: 2px;
+}
+
+div.filterBox {
+    float: right;
+}
+
+button.sortBtn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(33 150 243 / 0.1);
+    color: #2196F3;
+}
+
+button.sortBtn:before {
+    font-size: 15px;
+}
+
+button.sortBtn.active {
+    background-color: rgb(76 175 80 / 0.1);
+    color: #4CAF50;
+}
+
+button#sort-old:before {
+    content: "\f161";
+    font-family: 'FontAwesome';
+}
+
+button#sort-new:before {
+    content: "\f160";
+    font-family: 'FontAwesome';
+}
+
+button#sort-done:before {
+    content: "\f046";
+    font-family: 'FontAwesome';
+}
+
+button#sort-undone:before {
+    content: "\f096";
+    font-family: 'FontAwesome';
+}
+
+.list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 620px;
+}
+
+.project-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-info {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    background: #2196f3;
+    padding: 0 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-info a {
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.project-info a:hover {
+    color: #ffffff;
+}
