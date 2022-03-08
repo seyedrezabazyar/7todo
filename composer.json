@@ -1,0 +1,21 @@
+{
+    "name": "seyedrezabazyar/7todo",
+    "description": "A simple Todo List Project (With PHP, Ajax and MySQL)",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Seyedrezabazyar\\7todo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "seyedrezabazyar",
+            "email": "seyedrezabazyar@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^2.1"
+    }
+}
