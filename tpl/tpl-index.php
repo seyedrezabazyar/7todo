@@ -1,6 +1,3 @@
-<?php
-echo implode(" - ", $tasks) . rand(1,999999);
-?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
