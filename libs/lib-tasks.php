@@ -1,9 +1,6 @@
 <?php
 
-function getCurrentUserID(){
-    // Get login user id
-    return 1;
-}
+/*** Folder Functions ***/
 
 function deleteFolder($folderID){
     global $pdo;
@@ -27,6 +24,15 @@ function getFolders(){
     return $records;
 }
 
+/*** Tasks Functions ***/
+function removeTasks(){
+    return 1;
+}
+
+function addTasks(){
+    return 1;
+}
+
 function getTasks(){
-    return [1,2,3,4,5];
+    return 1;
 }
