@@ -33,6 +33,17 @@ input {
     border: 1px solid #ccc;
 }
 
+i.fa.fa-remove {
+    color: #ff7a7a;
+    float: right;
+    background-color:#efe7e7;
+}
+
+i.fa.fa-remove:hover {
+    color: #ff4a4a;
+    float: right;
+}
+
 .page {
     position: absolute;
     min-height: 650px;

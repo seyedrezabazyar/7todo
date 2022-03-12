@@ -24,7 +24,10 @@
         <div class="title">Folders</div>
         <ul>
           <?php foreach ($folders as $folder):?>
-          <li> <i class="fa fa-folder"></i><?= $folder->name ?></li>
+          <li>
+            <a href="?folder_id=<?= $folder->id ?>"> <i class="fa fa-folder"></i><?= $folder->name ?> </a>  
+            <a href="?delete_folder=<?= $folder->id ?>"> <i class="fa fa-remove"></i> </a> 
+          </li> 
           <?php endforeach; ?>
 
           <li class="active"> <i class="fa fa-folder"></i>Folder</li>
