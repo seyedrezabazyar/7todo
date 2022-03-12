@@ -81,5 +81,20 @@
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <script src="<?= BASE_URL ?>assets/js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#addFolderbtn').click(function(e){ 
+        var input = $('input#addFolderInput');
+        $.ajax({
+          url : "process/ajaxHandler.php",
+          method : "post",
+          data : {action : "addFolder", foldername : input.val()},
+          success : function(response){
+            alert(response);
+          },
+        });
+      });
+    });
+  </script>
 </body>
 </html>

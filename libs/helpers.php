@@ -3,6 +3,14 @@
 function getCurrentUrl(){
     return 1;
 }
+
+function isAjaxRequest(){
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        return true;
+    } else {
+        return false;
+    }
+}
  
 function diePage($msg)
 {
