@@ -34,8 +34,8 @@
         </ul>
       </div>
       <div>
-          <input type="text" id="newFolderInput" placeholder="Add New Folder"/>
-          <button type="submit" id="addFolderbtn" class="btn">+</button>
+          <input type="text" id="addFolderInput" placeholder="Add New Folder"/>
+          <button type="submit" id="addFolderbtn" class="btn clickable">+</button>
       </div>
     </div>
     <div class="view">
@@ -79,7 +79,7 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='hhttps://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="<?= BASE_URL ?>assets/js/script.js"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="<?= BASE_URL ?>assets/js/script.js"></script>
 </body>
 </html>

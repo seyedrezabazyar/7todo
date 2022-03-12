@@ -43,6 +43,11 @@ i.fa.fa-remove:hover {
     color: #ff4a4a;
 }
 
+.clickable:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .page {
     position: absolute;
     min-height: 650px;
