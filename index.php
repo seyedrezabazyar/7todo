@@ -6,7 +6,10 @@ include 'bootstrap/init.php';
 // var_dump($v);
 
 # connect to database and get tasks
-$tasks = getTasks();
+$folders = getFolders();
 
+var_dump($folders[0]->name);
+
+$tasks = getTasks();
 
 include 'tpl/tpl-index.php';

@@ -21,13 +21,18 @@
         </div>
       </div>
       <div class="menu">
-        <div class="title">Navigation</div>
+        <div class="title">Folders</div>
         <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+          <?php foreach ($folders as $folder):?>
+          <li> <i class="fa fa-folder"></i><?= $folder->name ?></li>
+          <?php endforeach; ?>
+
+          <li class="active"> <i class="fa fa-folder"></i>Folder</li>
         </ul>
+      </div>
+      <div>
+          <input type="text" id="newFolderInput" placeholder="Add New Folder"/>
+          <button type="submit" id="addFolderbtn" class="btn">+</button>
       </div>
     </div>
     <div class="view">

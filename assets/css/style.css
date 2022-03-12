@@ -20,6 +20,19 @@ a {
     outline: none;
 }
 
+input {
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-left: 3px;
+}
+
+.btn {
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
 .page {
     position: absolute;
     min-height: 650px;
@@ -162,12 +175,12 @@ a {
 }
 
 .main .nav .menu ul li.active {
-    color: #2196F3;
+    color: #2ab400;
 }
 
 .main .nav .menu ul li:hover {
     background-color: rgba(33, 150, 243, 0.2);
-    color: #2196F3;
+    color: #777777;
 }
 
 .removeFolderBtn {
