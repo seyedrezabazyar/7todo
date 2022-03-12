@@ -1,9 +1,9 @@
 <?php
 
 include 'constants.php';
-include 'config.php';
-include 'vendor/autoload.php';
-include 'libs/helpers.php';
+include BASE_PATH . 'bootstrap/config.php';
+include BASE_PATH . 'vendor/autoload.php';
+include BASE_PATH . 'libs/helpers.php';
 
 try {
     $pdo = new PDO("mysql:dbname={$databaseConfig->db};host={$databaseConfig->host}", $databaseConfig->user, $databaseConfig->password);
@@ -11,7 +11,7 @@ try {
     diepage('Connection failed: ' . $e->getMessage());
 }
 
-include 'libs/lib-auth.php';
-include 'libs/lib-tasks.php';
+include BASE_PATH . 'libs/lib-auth.php';
+include BASE_PATH . 'libs/lib-tasks.php';
 
 // echo "Connection is OK";
