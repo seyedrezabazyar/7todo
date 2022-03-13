@@ -284,6 +284,15 @@ div.addTask {
     font-weight: 700;
 }
 
+.main .view .viewHeader .title {
+    float: left;
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 0px;
+    color: #AAA;
+    margin-top: -18px;
+}
+
 .main .view .viewHeader .functions .button.active {
     background-color: #2196F3;
 }
