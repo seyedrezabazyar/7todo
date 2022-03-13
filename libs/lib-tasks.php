@@ -1,4 +1,10 @@
-<?php
+<?php defined('BASE_PATH') OR die("Permission Denied!");
+// alternative to top code
+// if(!defined('BASE_PATH')){
+//     echo "Permission Denied!";
+//     die();
+// }
+
 
 /*** Folder Functions ***/
 
