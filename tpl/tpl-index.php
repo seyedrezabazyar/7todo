@@ -22,7 +22,7 @@
       </div>
       <div class="menu">
         <div class="title">Folders</div>
-        <ul>
+        <ul class="folder-list">
           <?php foreach ($folders as $folder):?>
           <li>
             <a href="?folder_id=<?= $folder->id ?>"> <i class="fa fa-folder"></i><?= $folder->name ?> </a>  
@@ -88,9 +88,13 @@
         $.ajax({
           url : "process/ajaxHandler.php",
           method : "post",
-          data : {action : "addFolder", foldername : input.val()},
+          data : {action : "addFolder", folderName : input.val()},
           success : function(response){
-            alert(response);
+            if(response == '1'){
+              $('<li><a href="#"> <i class="fa fa-folder"></i>'+input.val()+'</a></li>').appendTo('ul.folder-list');
+            }else{
+              alert(response);
+            }
           },
         });
       });
