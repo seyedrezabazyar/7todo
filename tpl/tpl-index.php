@@ -26,8 +26,8 @@
         <ul class="folder-list">
           <?php foreach ($folders as $folder):?>
           <li>
-            <a href="?folder_id=<?= $folder->id ?>"> <i class="fa fa-folder"></i><?= $folder->name ?> </a>  
-            <a href="?delete_folder=<?= $folder->id ?>"> <i class="fa fa-remove"></i> </a> 
+            <a href="?folder_id=<?=$folder->id?>"> <i class="fa fa-folder"></i><?=$folder->name?></a>  
+            <a href="?delete_folder=<?=$folder->id?>"> <i class="fa fa-remove" onclick="return confirm('Are you sure to delete this Folder?\n<?=$folder->name?>');"></i> </a> 
           </li> 
           <?php endforeach; ?>
 
@@ -52,27 +52,18 @@
         <div class="list">
           <div class="title">Today</div>
           <ul>
-            <li class="checked"><i class="fa fa-check-square-o"></i><span>Update team page</span>
+
+          <?php foreach ($tasks as $task):?>
+            <li class="<?=$task->is_done?'checked':''?>">
+            <i class="fa <?=$task->is_done?'fa-check-square-o':'fa-square-o'?>"></i>
+            <span><?=$task->title?></span>
               <div class="info">
-                <div class="button green">In progress</div><span>Complete by 25/04/2014</span>
+                <span class="created-at">Created At <?=$task->created_at?></span>
+                <a href="?delete_task=<?=$task->id?>"> <i class="fa fa-remove" onclick="return confirm('Are you sure to delete this Item?\n<?=$task->title?>');"></i> </a> 
               </div>
             </li>
-            <li><i class="fa fa-square-o"></i><span>Design a new logo</span>
-              <div class="info">
-                <div class="button">Pending</div><span>Complete by 10/04/2014</span>
-              </div>
-            </li>
-            <li><i class="fa fa-square-o"></i><span>Find a front end developer</span>
-              <div class="info"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="list">
-          <div class="title">Tomorrow</div>
-          <ul>
-            <li><i class="fa fa-square-o"></i><span>Find front end developer</span>
-              <div class="info"></div>
-            </li>
+            <?php endforeach; ?>
+
           </ul>
         </div>
       </div>

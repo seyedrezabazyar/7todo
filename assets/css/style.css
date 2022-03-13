@@ -36,7 +36,6 @@ input {
 i.fa.fa-remove {
     color: #ff7a7a;
     float: right;
-    background-color:#efe7e7;
 }
 
 i.fa.fa-remove:hover {
@@ -46,6 +45,12 @@ i.fa.fa-remove:hover {
 .clickable:hover {
     cursor: pointer;
     opacity: 0.7;
+}
+
+span.created-at {
+    color: rgb(49, 49, 202);
+    margin-right: 30px;
+    font-size: 12px;
 }
 
 .page {
