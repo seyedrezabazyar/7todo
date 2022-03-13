@@ -213,6 +213,11 @@ span.created-at {
     color: #2196F3;
 }
 
+.main .nav .menu ul li.active a {
+    text-decoration: none;
+    color: #2ab400;
+}
+
 .main .nav .menu ul li i {
     font-size: 1.4em;
     margin-right: 10px;
@@ -291,6 +296,7 @@ div.addTask {
     padding: 0px;
     color: #AAA;
     margin-top: -18px;
+    width: 50%;
 }
 
 .main .view .viewHeader .functions .button.active {
@@ -334,6 +340,7 @@ div.addTask {
     height: 60px;
     line-height: 60px;
     list-style: none;
+    border-top: 1px solid #AAA;
 }
 
 .main .view .content .list ul li.checked {
@@ -406,9 +413,9 @@ div.addTask {
 input#addFolderInput {
     width: 130px;
     background-color: #ffffff;
-    color: Black;
+    color: #000000;
     font-family: "Lato";
-    border: 0px;
+    border: 1px solid #d1d1d1;
     margin-left: 5px;
 }
 

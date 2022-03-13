@@ -24,14 +24,13 @@
       <div class="menu">
         <div class="title">Folders</div>
         <ul class="folder-list">
+          <li class="<?=isset($_GET['folder_id'])?'':'active'?>"><i class="fa fa-folder"></i>All</li>
           <?php foreach ($folders as $folder):?>
-          <li>
+          <li class='<?=($_GET['folder_id']==$folder->id)?'active':""?>'>
             <a href="?folder_id=<?=$folder->id?>"> <i class="fa fa-folder"></i><?=$folder->name?></a>  
             <a href="?delete_folder=<?=$folder->id?>"> <i class="fa fa-remove" onclick="return confirm('Are you sure to delete this Folder?\n<?=$folder->name?>');"></i> </a> 
           </li> 
           <?php endforeach; ?>
-
-          <li class="active"> <i class="fa fa-folder"></i>Folder</li>
         </ul>
       </div>
       <div>
@@ -41,7 +40,9 @@
     </div>
     <div class="view">
       <div class="viewHeader">
-        <div class="title">Manage Tasks</div>
+        <div class="title">
+          <input type="text" id="taskNameInput" style="width:100%;margin-left:3%;line-height:30px;" placeholder="Add New Task">
+        </div>
         <div class="functions">
           <div class="button active">Add New Task</div>
           <div class="button">Completed</div>
@@ -52,7 +53,7 @@
         <div class="list">
           <div class="title">Today</div>
           <ul>
-
+          <?php if(sizeof($tasks)): ?>
           <?php foreach ($tasks as $task):?>
             <li class="<?=$task->is_done?'checked':''?>">
             <i class="fa <?=$task->is_done?'fa-check-square-o':'fa-square-o'?>"></i>
@@ -63,6 +64,9 @@
               </div>
             </li>
             <?php endforeach; ?>
+            <?php else: ?>
+              <li>No Task Here...</li>
+            <?php endif; ?>
 
           </ul>
         </div>

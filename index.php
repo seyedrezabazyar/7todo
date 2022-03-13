@@ -17,5 +17,4 @@ $folders = getFolders();
 
 $tasks = getTasks();
 
-
 include 'tpl/tpl-index.php';
