@@ -16,10 +16,10 @@ function deleteFolder($folderID){
     return $stmt->rowCount();
 }
 
-function addFolders($folderName){
+function addFolder($folderName){
     global $pdo;
     $currentUserID = getCurrentUserID();
-    $sql = "INSERT INTO folders (name,user_id) VALUES (:folder_name , :user_id);";
+    $sql = "INSERT INTO folders (name,user_id) VALUES (:folder_name ,:user_id);";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':folder_name'=>$folderName,':user_id'=>$currentUserID]);
     return $stmt->rowCount();
@@ -44,8 +44,13 @@ function deleteTask($taskID){
     return $stmt->rowCount();
 }
 
-function addTasks(){
-    return 1;
+function addTask($taskTitle,$folderID){
+    global $pdo;
+    $currentUserID = getCurrentUserID();
+    $sql = "INSERT INTO tasks (title,user_id,folder_id) VALUES (:title,:user_id,:folder_id);";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':title'=>$taskTitle,':user_id'=>$currentUserID,':folder_id'=>$folderID]);
+    return $stmt->rowCount();
 }
 
 function getTasks(){
