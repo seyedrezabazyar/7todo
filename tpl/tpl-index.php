@@ -100,7 +100,7 @@
           $.ajax({
           url : "process/ajaxHandler.php",
           method : "post",
-          data : {action : "addTask", folderID : <?=$_GET['folder_id']?>, taskTitle : $('#taskNameInput').val()},
+          data : {action : "addTask", folderID : <?= $_GET['folder_id'] ?? 0 ?>, taskTitle : $('#taskNameInput').val()},
           success : function(response){
             if(response == '1'){
               location.reload();
