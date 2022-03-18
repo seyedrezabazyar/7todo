@@ -2,12 +2,17 @@
 
 include 'bootstrap/init.php';
 
-if(isset($_GET['delete_folder']) && is_numeric($_GET['delete_folder'])){
+if (!isLoggedIn()) {
+    //redirect to auth form
+    header('Location: ' . site_url('auth.php'));
+}
+
+if (isset($_GET['delete_folder']) && is_numeric($_GET['delete_folder'])) {
     $deletedcount  = deleteFolder($_GET['delete_folder']);
     // echo "$deletedcount Folders successfully deleted!";
 }
 
-if(isset($_GET['delete_task']) && is_numeric($_GET['delete_task'])){
+if (isset($_GET['delete_task']) && is_numeric($_GET['delete_task'])) {
     $deletedcount  = deleteTask($_GET['delete_task']);
     // echo "$deletedcount Tasks successfully deleted!";
 }
