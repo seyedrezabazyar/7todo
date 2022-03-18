@@ -2,7 +2,7 @@
 
 include_once '../bootstrap/init.php';
 
-if(!isAjaxRequest()){
+if (!isAjaxRequest()) {
     diePage("Invalid Request!");
 }
 
@@ -10,14 +10,22 @@ if (!isset($_POST['action']) || empty($_POST['action'])) {
     diePage("Invalid Action!");
 }
 
-switch($_POST['action']){
+switch ($_POST['action']) {
+    case "doneSwitch":
+        $task_id = $_POST['taskID'];
+        if (!isset($task_id) || !is_numeric($task_id)) {
+            echo "آی دی تسک معتبر نیست.";
+            die();
+        }
+        doneSwitch($task_id);
+        break;
     case "addFolder":
         if (!isset($_POST['folderName']) || strlen($_POST['folderName']) < 3) {
             echo "نام فولدر باید بیشتر از ۲ حرف باشد.";
             die();
         }
         echo addFolder($_POST['folderName']);
-    break;
+        break;
     case "addTask":
         $folderID = $_POST['folderID'];
         $taskTitle = $_POST['taskTitle'];
@@ -29,8 +37,8 @@ switch($_POST['action']){
             echo "عنوان تسک باید بیشتر از ۲ حرف باشد.";
             die();
         }
-        echo addTask($taskTitle,$folderID);
-    break;
+        echo addTask($taskTitle, $folderID);
+        break;
 
     default:
         diePage("Invalid Request!");
