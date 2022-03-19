@@ -11,13 +11,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (!$result) {
             message('ERROR: an error occurred while registering!');
         } else {
-            message("Successfully registered. <br /><br /> Welcome To 7Todo <br /><br />
-            <a href='$home_url'>Manage Your Tasks</a>", 'success');
+            message("Successfully registered. Welcome To 7Todo. <br /><br />
+            <a href='{$home_url}auth.php'>Please Login</a>", 'message-success');
         }
     } else if ($action == 'login') {
         $result = login($params['email'], $params['password']);
         if (!$result) {
             message('ERROR: email or password incorrect!');
+        } else {
+            message("you are know Logged In. <br /><br />
+            <a href='{$home_url}'>Manage Your Tasks</a>", 'message-success');
         }
     }
 }

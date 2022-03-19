@@ -240,3 +240,24 @@ button:focus {
 #image-overlay.two {
     background-color: #AE94DE;
 }
+
+.message-info {
+    padding: 10px 30px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    font-family: sans-serif;
+}
+
+.message-success {
+    padding: 10px 30px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #7ee48c !important;
+    border: 1px solid #1fa331 !important;
+    color: #00002d !important;
+    font-family: sans-serif;
+}

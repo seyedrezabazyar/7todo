@@ -10,12 +10,46 @@ function getCurrentUserID()
 
 function isLoggedIn()
 {
-    return false;
+    return isset($_SESSION['login']) ? true : false;
 }
 
-function login($user, $password)
+function getLoggedInUser()
 {
-    return 1;
+    return $_SESSION['login'] ?? null;
+}
+
+function getUserByEmail($email)
+{
+    global $pdo;
+    $sql = "SELECT * FROM `users` WHERE email = :email";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':email' => $email]);
+    $records = $stmt->fetchAll(PDO::FETCH_OBJ);
+    return $records[0] ?? null;
+}
+
+function logout()
+{
+    unset($_SESSION['login']);
+}
+
+function login($email, $password)
+{
+    $user = getUserByEmail($email);
+
+    if (is_null($user)) {
+        return false;
+    }
+
+    #check the password
+    if (password_verify($password, $user->password)) {
+        # login is successful
+        $user->image = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user->email)));
+        $_SESSION['login'] = $user;
+        return true;
+    }
+
+    return false;
 }
 
 function register($userData)
