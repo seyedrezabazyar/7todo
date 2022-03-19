@@ -2,10 +2,10 @@
 
 /*** Auth Functions ***/
 
+// Get login user id
 function getCurrentUserID()
 {
-    // Get login user id
-    return 1;
+    return getLoggedInUser()->id ?? 0;
 }
 
 function isLoggedIn()

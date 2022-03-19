@@ -2,13 +2,13 @@
 
 include 'bootstrap/init.php';
 
-if (isset($GET['logout'])) {
+if (isset($_GET['logout'])) {
     logout();
 }
 
 if (!isLoggedIn()) {
     //redirect to auth form
-    header('Location: ' . site_url('auth.php'));
+    redirect(site_url('auth.php'));
 }
 
 #user is logged in
